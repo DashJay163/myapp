@@ -1,22 +1,18 @@
 body {
-	font-family:sans-serif;
-	position:relative;
+	font-family: sans-serif;
+	position: relative;
 }
-
-h1{
-	font-size:24px;
-	font-weight:400;
-
+	
+h1 {
+	font-size: 20px;
+	font-weight: 400;
 }
 
 div.navigation {
-
-	position:fixed;
-	top:0px;
-	left:0px;
-	width:100%;
-	padding:0px 20px;
-	background-color:#F1F1F1;
-	
-	
-	
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 0px 20px;
+	background-color: blue;
+}
