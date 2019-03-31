@@ -39,69 +39,43 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Register</title>s
+    <title>Hello World</title>s
 </head>
 
 <body>
     <div class="app">
 <!--all your app code goes here-->
         <div class="navigation">
-        <h1>My App 3:)</h1>
-		</div>
-		
-		<div class="login-form">
-		<form id="registerForm" onsubmit="event.preventDefault();return validate();">
-		     <label>User name:</label>
-			 <input type="text" id="user name" required>
-			 
-			 <label>Password:</label>
-			 <input type="password" id="password" required>
-			 
-			 <label>Confirm password:</label>
-			 <input type="password" id="password" required>
-			 
-			 <label>Email:</label>
-			 <input type="password" id="password" required>
-			 
-			 <button type="submit">Register</button>
-			 <button type="button" id="register">Login</button>
-			 </form>
-			 </div>
-		</div>
-			 
-			 <input type="text">
+        <h1>mobile Application</h1>
+		<button type="button" onclick="window.location.href='setting.html'">go to settings</button>
+		<button type="button" onclick="window.location.href='login.html'">log In</button>
+    </div>
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>\
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript">                                                                                                                             
-	
-	
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
         app.initialize();
-		
-		function validate() {
-				password() {
-					var password=document.getElementById('password').value;
-					var confirmpassword=document.getElementById('confirmpassword').value;
-					
-					if(password==confirmpassword){
+		function showUsers() {
+				
 					//submit the form
 					$.ajax({
-						url:"http://localhost/mobileappAPI/adduser.php",
+						url:"http://localhost/mobileappAPI/listofusers.php",
 						type:"GET"
 						cache:false,
-						data:{add_user:1,username,password:password,email:email},
+						data:{users:1},
 						success:function(response){
-							if(response== "success")
-							{
-									alert("user Registered successfully");
-							}
-							else
-							{
-									alert(response);
-							}		
-						
+						document.getElementById('userlist').value=response;
+					}		
+			});	
 		}
-		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
     </script>
 </body>
 
